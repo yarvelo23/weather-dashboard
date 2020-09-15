@@ -1,0 +1,32 @@
+ul {
+    list-style: none;
+
+}
+
+li {
+    border-bottom: 2px solid gray;
+    text-align: left;
+    padding-left: 15px;
+}
+
+
+.card-title {
+    font-size: 30px;
+}
+
+
+img {
+    width: 200px;
+    height: 200px;
+}
+
+
+.fiveDayColor {
+    padding: 20px;
+    background-color: #1E90FF;
+    color: white;
+    float: left;
+    margin: 10px;
+    border: 1px solid gray;
+
+}
