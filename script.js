@@ -11,3 +11,23 @@ for (var i = 0; i < localStorage.length; i++) {
     // append the city input to the screen
     cityName.append("<li>" + city + "</li>");
 }
+
+// variable for search button
+var searchButton = $(".searchButton");
+
+// input count to be used for local storage purposes
+var cityCount = 0;
+
+// adding click event (event listener) to search button
+searchButton.click(function () {
+
+    var cityInput = $(".searchInput").val();
+
+    // urls for api calls
+    var urlCurrentWeather = "https://api.openweathermap.org/data/2.5/weather?q=" + cityInput + "&Appid=" + apiKey + "&units=imperial";
+
+    var urlFiveDayWeather = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityInput + "&Appid=" + apiKey + "&units=imperial";
+
+
+
+})
