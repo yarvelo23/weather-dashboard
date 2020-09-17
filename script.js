@@ -44,7 +44,7 @@ searchButton.click(function () {
             // local storage
             var storage = localStorage.setItem(keyCount, response.name);
             // append a new city to the existing list
-            cityCount = cityCount + 1;
+            cityCount = cityCount++;
 
             // current weather append
             var currentWeatherCard = $(".currentWeatherCard").append("<div>").addClass("card-body");
@@ -85,7 +85,20 @@ searchButton.click(function () {
         });
     
         
-        // NEED TO ADD CODE FOR UV INDEX
+        // UV Index URL
+        var urlUV = `https://api.openweathermap.org/data/2.5/uvi?appid=b8ecb570e32c2e5042581abd004b71bb&lat=${response.coord.lat}&lon=${response.coord.lon}`;
+
+        // UV Index
+        $.ajax({
+            url: urlUV,
+            method: "GET"
+        }).then(function (response) {
+
+            var currentUV = currentTemp.append("<p>" + "UV Index: " + response.value + "</p>").addClass("card-text");
+            currentUV.addClass("UV");
+            currentTemp.append(currentUV);
+            
+        });
     }
 
     
