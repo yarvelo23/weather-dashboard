@@ -30,7 +30,7 @@ searchButton.click(function () {
 
     // conditional statement to check if user inputs a valid city
     if (cityInput == "") {
-        console.log(cityInput);
+        prompt("Please enter a valid city");
     }
     else {
         $.ajax({
@@ -86,7 +86,7 @@ searchButton.click(function () {
     
         
         // UV Index URL
-        var urlUV = `https://api.openweathermap.org/data/2.5/uvi?appid=b8ecb570e32c2e5042581abd004b71bb&lat=${response.coord.lat}&lon=${response.coord.lon}`;
+        var urlUV = `https://api.openweathermap.org/data/2.5/uvi?appid=31b2ec10feccf2ed54ed62f57354e7e0&lat=${response.coord.lat}&lon=${response.coord.lon}`;
 
         // UV Index
         $.ajax({
